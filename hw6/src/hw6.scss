@@ -1,0 +1,22 @@
+body { margin: 16px; font-family: Arial, sans-serif; }
+.gallery { max-width: 1000px; margin: 0 auto; }
+.viewer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  button { padding: 6px 10px; cursor: pointer; }
+}
+.image-field {
+  flex: 1;
+  min-width: 0;
+  height: 65vh;
+  overflow: auto;
+  display: flex;
+  img { display: block; flex: none; max-width: none; margin: auto; }
+}
+.controls {
+  max-width: 480px;
+  margin: 16px auto 0;
+  label { display: block; margin-bottom: 8px; }
+  input { width: 100%;}
+}

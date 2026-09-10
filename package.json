@@ -1,0 +1,41 @@
+{
+  "name": "js-homework",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "test": "jest --runInBand",
+    "start": "npm --prefix hw6 start",
+    "build": "npm --prefix hw6 run build",
+    "typecheck": "npm --prefix hw6 run typecheck"
+  },
+  "devDependencies": {
+    "jest": "^30.0.0",
+    "jest-environment-jsdom": "^30.0.0"
+  },
+  "jest": {
+    "projects": [
+      {
+        "displayName": "node",
+        "testEnvironment": "node",
+        "testMatch": [
+          "<rootDir>/hw[1235]/*.test.js"
+        ]
+      },
+      {
+        "displayName": "dom",
+        "testEnvironment": "jsdom",
+        "testMatch": [
+          "<rootDir>/hw4/*.test.js",
+          "<rootDir>/hw6/src/*.test.tsx"
+        ],
+        "transform": {
+          "^.+\\.tsx?$": "<rootDir>/test-support/transform.cjs",
+          "\\.jpe?g$": "<rootDir>/test-support/image.cjs"
+        },
+        "moduleNameMapper": {
+          "\\.scss$": "<rootDir>/test-support/asset.cjs"
+        }
+      }
+    ]
+  }
+}
